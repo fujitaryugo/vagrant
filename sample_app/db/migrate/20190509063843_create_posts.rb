@@ -3,7 +3,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
     create_table :posts do |t|
     	# 以下の２行を追加
       t.string :title
-      t.string :bod
+      t.string :body
       t.timestamps
     end
   end
