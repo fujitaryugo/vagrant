@@ -21,11 +21,14 @@ class PostsController < ApplicationController
 
 
   def show
+  	  @post = Post.find(params[:id])
   end
 
-
-
-
+  def create
+  	  post = Post.new(post_params)
+  	  post.save # DBへ保存する
+  	  redirect_to post_path(post.id) # 詳細画面へリダイレクト
+  end
 
 
      private
