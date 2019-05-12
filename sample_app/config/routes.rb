@@ -9,6 +9,7 @@ Rails.application.routes.draw do
    get '/posts/:id' => 'posts#show', as: 'post'
    # .../posts/1 や .../posts/3 に該当する
 
-   get 'pots/:id/edit' => 'posts#edit', as 'edit_post'
+   get 'pots/:id/edit' => 'posts#edit', as: 'edit_post'
+   patch 'posts/:id' => 'posts#update' , as: 'update_post'
 
 end
