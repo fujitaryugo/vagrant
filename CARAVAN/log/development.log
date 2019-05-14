@@ -1,0 +1,572 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateBlogs (20190512060006)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "category" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190512060006_create_blogs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190512060006"]]
+  ↳ bin/rails:9
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (6.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-12 06:00:36.416863"], ["updated_at", "2019-05-12 06:00:36.416863"]]
+  ↳ bin/rails:9
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/blogs" for 10.0.2.2 at 2019-05-12 06:45:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (190.1ms)
+Completed 500 Internal Server Error in 282ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "img/forest.jpg" is not present in the asset pipeline.):
+    37:       <h2 class="blog-headline">Recent Blogs</h2>
+    38:       <div class="blog-box">
+    39:         <div class="blog-item clearfix">
+    40:           <%= image_tag('img/forest.jpg',  class: 'blog-image') %>
+    41:           <section class="blog-text">
+    42:             <h3 class="blog-text-headline">
+    43:               <a href="single.html">
+  
+app/views/blogs/index.html.erb:40:in `_app_views_blogs_index_html_erb__1964589520224432587_46969157941720'
+Started GET "/blogs" for 10.0.2.2 at 2019-05-12 06:46:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (29.1ms)
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "img/forest.jpg" is not present in the asset pipeline.):
+    37:       <h2 class="blog-headline">Recent Blogs</h2>
+    38:       <div class="blog-box">
+    39:         <div class="blog-item clearfix">
+    40:           <%= image_tag('img/forest.jpg',  class: 'blog-image') %>
+    41:           <section class="blog-text">
+    42:             <h3 class="blog-text-headline">
+    43:               <a href="single.html">
+  
+app/views/blogs/index.html.erb:40:in `_app_views_blogs_index_html_erb__1964589520224432587_70197079746880'
+Started GET "/blogs" for 10.0.2.2 at 2019-05-12 06:47:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (38.0ms)
+Completed 500 Internal Server Error in 159ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "img/forest.jpg" is not present in the asset pipeline.):
+    37:       <h2 class="blog-headline">Recent Blogs</h2>
+    38:       <div class="blog-box">
+    39:         <div class="blog-item clearfix">
+    40:           <%= image_tag('img/forest.jpg',  class: 'blog-image') %>
+    41:           <section class="blog-text">
+    42:             <h3 class="blog-text-headline">
+    43:               <a href="single.html">
+  
+app/views/blogs/index.html.erb:40:in `_app_views_blogs_index_html_erb__1964589520224432587_70197130650240'
+Started GET "/blogs" for 10.0.2.2 at 2019-05-12 07:06:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (23.0ms)
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Not a directory @ dir_initialize - /vagrant/CARAVAN/app/assets/images/img):
+    37:       <h2 class="blog-headline">Recent Blogs</h2>
+    38:       <div class="blog-box">
+    39:         <div class="blog-item clearfix">
+    40:           <%= image_tag('img/forest.jpg',  class: 'blog-image') %>
+    41:           <section class="blog-text">
+    42:             <h3 class="blog-text-headline">
+    43:               <a href="single.html">
+  
+app/views/blogs/index.html.erb:40:in `_app_views_blogs_index_html_erb__1964589520224432587_46969165576660'
+Started GET "/blogs" for 10.0.2.2 at 2019-05-12 07:20:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (194.4ms)
+Completed 500 Internal Server Error in 280ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "img/forest.jpg" is not present in the asset pipeline.):
+    37:       <h2 class="blog-headline">Recent Blogs</h2>
+    38:       <div class="blog-box">
+    39:         <div class="blog-item clearfix">
+    40:           <%= image_tag('img/forest.jpg',  class: 'blog-image') %>
+    41:           <section class="blog-text">
+    42:             <h3 class="blog-text-headline">
+    43:               <a href="single.html">
+  
+app/views/blogs/index.html.erb:40:in `_app_views_blogs_index_html_erb__715006974973134908_47015748660500'
+Started GET "/blogs" for 10.0.2.2 at 2019-05-12 07:41:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendered blogs/index.html.erb within layouts/application (3245.3ms)
+Completed 200 OK in 3521ms (Views: 3486.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/new" for 10.0.2.2 at 2019-05-12 08:09:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 1055ms (Views: 1001.3ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/blogs/new" for 10.0.2.2 at 2019-05-12 08:37:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 962ms (Views: 918.5ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/blogs" for 10.0.2.2 at 2019-05-12 08:38:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sYvRUacd/yTiQlwKYSEfsUj5paraBel/tNEhtO5qCjXNT8njBd8buE7/7P1F7E0tu9fvaUMHM8Vvbh2Mgf7W9w==", "blog"=>{"title"=>"１回目", "category"=>"あああ", "body"=>"一回め"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:16
+  [1m[36mBlog Create (7.8ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "category", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "１回目"], ["category", "あああ"], ["body", "一回め"], ["created_at", "2019-05-12 08:38:39.987572"], ["updated_at", "2019-05-12 08:38:39.987572"]]
+  ↳ app/controllers/blogs_controller.rb:16
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:16
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 24ms (ActiveRecord: 15.1ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-05-12 08:38:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:39
+  Rendered blogs/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 266ms (Views: 214.1ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/blogs" for 10.0.2.2 at 2019-05-12 08:39:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sYvRUacd/yTiQlwKYSEfsUj5paraBel/tNEhtO5qCjXNT8njBd8buE7/7P1F7E0tu9fvaUMHM8Vvbh2Mgf7W9w==", "blog"=>{"title"=>"２回目", "category"=>"あああ", "body"=>"２回め"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:16
+  [1m[36mBlog Create (7.8ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "category", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "２回目"], ["category", "あああ"], ["body", "２回め"], ["created_at", "2019-05-12 08:39:05.092328"], ["updated_at", "2019-05-12 08:39:05.092328"]]
+  ↳ app/controllers/blogs_controller.rb:16
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:16
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 24ms (ActiveRecord: 12.6ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-05-12 08:39:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:39
+  Rendered blogs/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 238ms (Views: 211.8ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/blogs" for 10.0.2.2 at 2019-05-12 08:39:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sYvRUacd/yTiQlwKYSEfsUj5paraBel/tNEhtO5qCjXNT8njBd8buE7/7P1F7E0tu9fvaUMHM8Vvbh2Mgf7W9w==", "blog"=>{"title"=>"３回目", "category"=>"あああ", "body"=>"３回め"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:16
+  [1m[36mBlog Create (8.4ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "category", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "３回目"], ["category", "あああ"], ["body", "３回め"], ["created_at", "2019-05-12 08:39:22.364749"], ["updated_at", "2019-05-12 08:39:22.364749"]]
+  ↳ app/controllers/blogs_controller.rb:16
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:16
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 26ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-05-12 08:39:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:39
+  Rendered blogs/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 250ms (Views: 224.6ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/blogs" for 10.0.2.2 at 2019-05-12 08:39:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sYvRUacd/yTiQlwKYSEfsUj5paraBel/tNEhtO5qCjXNT8njBd8buE7/7P1F7E0tu9fvaUMHM8Vvbh2Mgf7W9w==", "blog"=>{"title"=>"４回目", "category"=>"あああ", "body"=>"４回め"}, "commit"=>"投稿"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:16
+  [1m[36mBlog Create (10.0ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "category", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "４回目"], ["category", "あああ"], ["body", "４回め"], ["created_at", "2019-05-12 08:39:38.680419"], ["updated_at", "2019-05-12 08:39:38.680419"]]
+  ↳ app/controllers/blogs_controller.rb:16
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:16
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 33ms (ActiveRecord: 16.1ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-05-12 08:39:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:39
+  Rendered blogs/index.html.erb within layouts/application (48.3ms)
+Completed 200 OK in 262ms (Views: 233.5ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/blogs" for 10.0.2.2 at 2019-05-12 08:39:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sYvRUacd/yTiQlwKYSEfsUj5paraBel/tNEhtO5qCjXNT8njBd8buE7/7P1F7E0tu9fvaUMHM8Vvbh2Mgf7W9w==", "blog"=>{"title"=>"５回目", "category"=>"あああ", "body"=>"５回め"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:16
+  [1m[36mBlog Create (11.5ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "category", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "５回目"], ["category", "あああ"], ["body", "５回め"], ["created_at", "2019-05-12 08:39:56.670861"], ["updated_at", "2019-05-12 08:39:56.670861"]]
+  ↳ app/controllers/blogs_controller.rb:16
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:16
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 33ms (ActiveRecord: 20.8ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-05-12 08:39:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:39
+  Rendered blogs/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 247ms (Views: 221.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/blogs/1" for 10.0.2.2 at 2019-05-12 09:01:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (3.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:3
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (837.4ms)
+Completed 200 OK in 1277ms (Views: 1221.3ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/blogs/1" for 10.0.2.2 at 2019-05-12 09:02:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (2.3ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:3
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 190ms (Views: 160.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/blogs/1" for 10.0.2.2 at 2019-05-12 09:02:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (2.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:3
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 204ms (Views: 165.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-05-12 09:02:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:39
+  Rendered blogs/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 214ms (Views: 178.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/blogs/1" for 10.0.2.2 at 2019-05-12 09:02:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (2.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:3
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 208ms (Views: 162.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/blogs/1/edit" for 10.0.2.2 at 2019-05-12 09:51:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (1.9ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:22
+  Rendering blogs/edit.html.erb within layouts/application
+  Rendered blogs/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 1054ms (Views: 1003.0ms | ActiveRecord: 7.8ms)
+
+
+Started PATCH "/blogs/1" for 10.0.2.2 at 2019-05-12 09:52:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jmtiLAfA+PDRm+EaYh2kiHdlwG9EA/agnNvAG8zJforyr3qepQIcbH0mUe1G0PYUhEuKrN0BLBpHZPwjo12iSA==", "blog"=>{"title"=>"１回目", "category"=>"いいいいいい", "body"=>"一回め"}, "commit"=>"保存", "id"=>"1"}
+  [1m[36mBlog Load (1.7ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:26
+  [1m[36mBlog Update (5.6ms)[0m  [1m[33mUPDATE "blogs" SET "category" = ?, "updated_at" = ? WHERE "blogs"."id" = ?[0m  [["category", "いいいいいい"], ["updated_at", "2019-05-12 09:52:04.796226"], ["id", 1]]
+  ↳ app/controllers/blogs_controller.rb:26
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:26
+Redirected to http://localhost:3000/blogs/1
+Completed 302 Found in 20ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/blogs/1" for 10.0.2.2 at 2019-05-12 09:52:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (1.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:3
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 253ms (Views: 229.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/blogs/1/edit" for 10.0.2.2 at 2019-05-12 09:52:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (1.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:22
+  Rendering blogs/edit.html.erb within layouts/application
+  Rendered blogs/edit.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 182ms (Views: 146.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/blogs/1" for 10.0.2.2 at 2019-05-12 09:52:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (2.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:3
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 189ms (Views: 157.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/blogs/1/edit" for 10.0.2.2 at 2019-05-12 09:52:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (2.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:22
+  Rendering blogs/edit.html.erb within layouts/application
+  Rendered blogs/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 197ms (Views: 162.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blogs/1" for 10.0.2.2 at 2019-05-12 09:53:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (1.9ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:3
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 198ms (Views: 157.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/blogs/1" for 10.0.2.2 at 2019-05-12 09:53:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (1.3ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:3
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 205ms (Views: 168.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/blogs/1/edit" for 10.0.2.2 at 2019-05-12 09:53:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (3.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:22
+  Rendering blogs/edit.html.erb within layouts/application
+  Rendered blogs/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 175ms (Views: 139.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/blogs/1" for 10.0.2.2 at 2019-05-12 10:20:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (2.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:3
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (771.0ms)
+Completed 200 OK in 1157ms (Views: 1105.3ms | ActiveRecord: 8.1ms)
+
+
+Started DELETE "/blogs/1" for 10.0.2.2 at 2019-05-12 10:20:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GlYieUyqJ6jlFjzLoT2Wizrv8HFrq9HIZtYEgC3z0RlmkjrL7mjDNEmrjDyF8MQXycG6svKpC3K9aTi4QmcN2w==", "id"=>"1"}
+  [1m[36mBlog Load (1.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:32
+  [1m[36mBlog Destroy (11.4ms)[0m  [1m[31mDELETE FROM "blogs" WHERE "blogs"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/blogs_controller.rb:32
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:32
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 33ms (ActiveRecord: 21.7ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-05-12 10:20:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:39
+  Rendered blogs/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 227ms (Views: 200.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/blogs/4" for 10.0.2.2 at 2019-05-12 10:21:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBlog Load (2.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:3
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 195ms (Views: 163.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/blogs/4" for 10.0.2.2 at 2019-05-12 10:21:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBlog Load (1.9ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:3
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 200ms (Views: 160.8ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/blogs/4" for 10.0.2.2 at 2019-05-12 10:21:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+jSvh6UIhgj/fc/cMqtFH7BaQUt3QkRaVbN0vIvEXZmG8Lc1B8pilFPAfysWZheDQ3QLiO5AnuCODEiE5FCBWw==", "id"=>"4"}
+  [1m[36mBlog Load (1.3ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:32
+  [1m[36mBlog Destroy (9.1ms)[0m  [1m[31mDELETE FROM "blogs" WHERE "blogs"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/blogs_controller.rb:32
+  [1m[35m (9.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:32
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 35ms (ActiveRecord: 20.1ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-05-12 10:21:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (2.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:39
+  Rendered blogs/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 203ms (Views: 176.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-05-12 10:21:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:39
+  Rendered blogs/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 230ms (Views: 191.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/blogs/3" for 10.0.2.2 at 2019-05-12 10:21:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (1.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:3
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 192ms (Views: 155.9ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/blogs/3" for 10.0.2.2 at 2019-05-12 10:21:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"A1Km0IrEAGLj0zolVzfnypCY8k+a/VQN+KQNwU9nrNN/lr5iKAbk/k9uitJz+rVWY7a4jAP/jrcjGzH5IPNwEQ==", "id"=>"3"}
+  [1m[36mBlog Load (2.2ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blogs_controller.rb:32
+  [1m[36mBlog Destroy (8.2ms)[0m  [1m[31mDELETE FROM "blogs" WHERE "blogs"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/blogs_controller.rb:32
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blogs_controller.rb:32
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 29ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/blogs" for 10.0.2.2 at 2019-05-12 10:21:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:39
+  Rendered blogs/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 193ms (Views: 170.9ms | ActiveRecord: 0.9ms)
+
+
